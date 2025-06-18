@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: stg_accidents
+    description: "Clean staging layer for Air Traffic Accidents: parses timestamps, casts numeric fields, adds quality flags."
+    columns:
+      - name: NtsbNo
+        description: "NTSB accident identifier."
+      - name: EventDate_parsed
+        description: "Parsed Event Date as TIMESTAMP."
+      - name: DocketPublishDate_parsed
+        description: "Parsed Docket Publish Date as TIMESTAMP."
+      - name: FatalInjuryCount
+        description: "Number of fatal injuries (int)."
+      - name: SeriousInjuryCount
+        description: "Number of serious injuries (int)."
+      - name: MinorInjuryCount
+        description: "Number of minor injuries (int)."
+      - name: Latitude
+        description: "Latitude in decimal degrees."
+      - name: Longitude
+        description: "Longitude in decimal degrees."
+      - name: EventDate_parse_error
+        description: "True if EventDate parsing failed."
+      - name: DocketPublishDate_parse_error
+        description: "True if DocketPublishDate parsing failed."
